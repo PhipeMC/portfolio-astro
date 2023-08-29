@@ -1,0 +1,403 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Welcome to Astro.">
+	<main
+		class="main-bg text-gray-600 selection:bg-gray-400 selection:text-white dark:bg-bgDark dark:text-gray-300"
+	>
+		<section
+			class="max-w-7xl w-5/6 min-h-screen pt-20 flex flex-col items-center justify-center gap-9 m-auto lg:flex-row-reverse lg:justify-evenly"
+			id=""
+		>
+			<img
+				src="https://media.licdn.com/dms/image/D5603AQEz4J1zdB9U1A/profile-displayphoto-shrink_400_400/0/1689537265905?e=1695859200&v=beta&t=iKM6IBjxzgdUeD-UAaJFzYoCfyASpyaV9yj6aP8I9sg"
+				alt=""
+				class="animate-profile border-8 border-purple-600"
+			/>
+			<div class="text-center lg:text-left">
+				<p class="dark:text-gray-100 text-xl md:text-2xl xl:text-3xl">
+					Hi, I'm Cesar 👋
+				</p>
+				<h2
+					class="text-2xl scale-110 sm:scale-100 sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-950 md:text-4xl xl:text-5xl"
+				>
+					Frontend Developer
+				</h2>
+				<p class="dark:text-gray-100 text-xl md:text-2xl xl:text-3xl">
+					That loves creating web apps.
+				</p>
+				<div class="flex gap-4 my-3 mt-5">
+					<a href="https://linkedin.com/in/phipedev" target="_blank">
+						<i
+							class="fa-brands fa-linkedin text-2xl text-white hover:text-purple-700/50"
+						></i>
+					</a>
+					<a href="https://github.com/PhipeMC" target="_blank">
+						<i
+							class="fa-brands fa-github text-2xl text-white hover:text-purple-700/50"
+						></i>
+					</a>
+				</div>
+				<div class="flex gap-4">
+					<a
+						href="#"
+						class="btn border-2 border-purple-700 rounded-md hover:bg-purple-700/[0.2]"
+					>
+						<div class="flex gap-3 items-center">
+							Resume
+							<Icon
+								name="iconamoon:arrow-left-2-light"
+								rotate={2}
+							/>
+						</div>
+					</a>
+					<a
+						href="#"
+						class="btn border-2 border-purple-700 bg-purple-700 rounded-md hover:bg-purple-900 hover:border-purple-900"
+					>
+						<div class="flex gap-3 items-center">
+							Portfolio
+							<i class="fa-solid fa-arrow-right animate-arrow"
+							></i>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section
+			id="about"
+			class="bg-bgLight flex items-center justify-center dark:bg-bgDarkSecondary bg-purple-950"
+		>
+			<div class="flex flex-col gap-12 max-w-7xl w-5/6 pt-20 pb-20">
+				<div class="flex flex-col gap-3">
+					<h1 class="title">
+						About<span class="text-purple-600">.</span>
+					</h1>
+					<p class="text-lg text-bal">
+						Hello! I'm Cesar Dominguez, a Frontend developer from
+						Mexico. I'm a software engineer with a passion for
+						creating beautiful and functional web interfaces. My
+						strongest skills are HTML, CSS, and JavaScript, and I'm
+						always learning new technologies and tools. I'm also
+						experienced with React and other frameworks.
+					</p>
+				</div>
+				<div class="flex flex-col gap-3">
+					<h3 class="text-left text-2xl font-medium dark:text-white">
+						Education:
+					</h3>
+					<ul
+						class="marker:text-purple-700 list-disc text-lg flex flex-wrap flex-row gap-5 lg:flex-col lg:gap-4"
+					>
+						<li class="ml-5">
+							Software Engineer <span
+								class="italic opacity-60 text-base block"
+								>TECNM Sur Guanajuato Campus <span class="block"
+									>2018 - 2023</span
+								></span
+							>
+						</li>
+						<li class="ml-5">
+							Full Stack Developer <span
+								class="italic opacity-60 text-base block"
+								>Centro Medico de Alta Especialidad <span
+									class="block">Ago 2022 - Current</span
+								></span
+							>
+						</li>
+					</ul>
+				</div>
+				<div class="flex flex-col gap-5">
+					<h2 class="text-left text-2xl font-medium dark:text-white">
+						Tech Stack:
+					</h2>
+					<div class="flex flex-wrap gap-12">
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/HTML.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>HTML</p>
+						</div>
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/CSS.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>CSS</p>
+						</div>
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/JavaScript.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>JavaScript</p>
+						</div>
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/ReactJS.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>ReactJS</p>
+						</div>
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/Bootstrap.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>Bootstrap</p>
+						</div>
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/Tailwind.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>Tailwind</p>
+						</div>
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/MySQL.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>MySQL</p>
+						</div>
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/Git.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>Git</p>
+						</div>
+						<div class="flex flex-col items-center gap-1">
+							<img
+								src="/assets/GitHub.svg"
+								alt=""
+								class="w-icon select-none"
+							/>
+							<p>GitHub</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="work" class="bg-footer">
+			<div
+				class="max-w-7xl w-5/6 m-auto flex flex-col gap-8 pt-20 pb-20 justify-center items-center"
+			>
+				<h2 class="title">
+					My work<span class="text-purple-700">.</span>
+				</h2>
+				<div
+					class="flex items-center justify-center flex-wrap gap-8 max-w-4xl w-full"
+				>
+					<div
+						class="shadow-md bg-bgLightSecondary dark:bg-bgDarkSecondary border border-transparent dark:border-sky-900 max-w-xs rounded-xl overflow-hidden"
+					>
+						<img
+							src="assets/SQLJudge.jpeg"
+							alt="project image"
+							width="320"
+							height="240"
+						/>
+						<div
+							class="p-5 flex flex-col gap-5 border-t-2 border-primary"
+						>
+							<div class="flex flex-col gap-1">
+								<h3 class="text-primary text-2xl font-semibold">
+									SQL Judge
+								</h3>
+								<p class="text-base">
+									Web app to practice SQL languaje build with
+									HTML, CSS, JavaScript, PHP, Bootstrap and
+									MySQL.
+								</p>
+							</div>
+							<div class="flex gap-3 w-full justify-start">
+								<img
+									src="/assets/HTML.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+								<img
+									src="/assets/CSS.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+								<img
+									src="/assets/JavaScript.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+								<img
+									src="/assets/PHP.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+								<img
+									src="/assets/MySQL.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+								<img
+									src="/assets/Bootstrap.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+							</div>
+						</div>
+					</div>
+					<div
+						class="shadow-md bg-bgLightSecondary dark:bg-bgDarkSecondary border border-transparent dark:border-sky-900 max-w-xs rounded-xl overflow-hidden"
+					>
+						<img
+							src="https://sbetav.me/assets/mylinks-9affb3d8.webp"
+							alt="project image"
+							width="320"
+							height="240"
+						/>
+						<div
+							class="p-5 flex flex-col gap-5 border-t-2 border-primary"
+						>
+							<div class="flex flex-col gap-1">
+								<h3 class="text-primary text-2xl font-semibold">
+									Dental software
+								</h3>
+								<p class="text-base">
+									AI model trained with TensorFlow and Python
+									than detect defects in clothing with a
+									camera in real time.
+								</p>
+							</div>
+							<div class="flex gap-3 w-full justify-start">
+								<img
+									src="/assets/ReactJS.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+								<img
+									src="/assets/CSS.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+								<img
+									src="/assets/Bootstrap.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+							</div>
+						</div>
+					</div>
+					<div
+						class="shadow-md bg-bgLightSecondary dark:bg-bgDarkSecondary border border-transparent dark:border-sky-900 max-w-xs rounded-xl overflow-hidden"
+					>
+						<img
+							src="https://sbetav.me/assets/mylinks-9affb3d8.webp"
+							alt="project image"
+							width="320"
+							height="240"
+						/>
+						<div
+							class="p-5 flex flex-col gap-5 border-t-2 border-primary"
+						>
+							<div class="flex flex-col gap-1">
+								<h3 class="text-primary text-2xl font-semibold">
+									Recognition of errors in clothing using AI
+								</h3>
+								<p class="text-base">
+									AI model trained with TensorFlow and Python
+									than detect defects in clothing with a
+									camera in real time.
+								</p>
+							</div>
+							<div class="flex gap-3 w-full justify-start">
+								<img
+									src="/assets/Tensorflow.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+								<img
+									src="/assets/Python.svg"
+									alt=""
+									class="w-6 hover:zoom-out"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section id="contact" class="min-h-screen bg-purple-950"></section>
+		</section>
+	</main>
+
+	<style>
+		main {
+			margin: auto;
+			padding: 1rem;
+			width: 800px;
+			max-width: calc(100% - 2rem);
+			color: white;
+			font-size: 20px;
+			line-height: 1.6;
+		}
+		.astro-a {
+			position: absolute;
+			top: -32px;
+			left: 50%;
+			transform: translatex(-50%);
+			width: 220px;
+			height: auto;
+			z-index: -1;
+		}
+		h1 {
+			font-size: 4rem;
+			font-weight: 700;
+			line-height: 1;
+			text-align: center;
+			margin-bottom: 1em;
+		}
+		.text-gradient {
+			background-image: var(--accent-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+		}
+		.instructions {
+			margin-bottom: 2rem;
+			border: 1px solid rgba(var(--accent-light), 25%);
+			background: linear-gradient(
+				rgba(var(--accent-dark), 66%),
+				rgba(var(--accent-dark), 33%)
+			);
+			padding: 1.5rem;
+			border-radius: 8px;
+		}
+		.instructions code {
+			font-size: 0.8em;
+			font-weight: bold;
+			background: rgba(var(--accent-light), 12%);
+			color: rgb(var(--accent-light));
+			border-radius: 4px;
+			padding: 0.3em 0.4em;
+		}
+		.instructions strong {
+			color: rgb(var(--accent-light));
+		}
+		.link-card-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+			gap: 2rem;
+			padding: 0;
+		}
+	</style>
+</Layout>
