@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About">
+    <main class="pt-20">
+        <h1>About</h1>
+        <Icon name="vscode-icons:file-type-astro" />
+    </main>
+</Layout>
+<style lang="css">
+    [astro-icon] {
+        display: inline;
+        width: 24px;
+        height: 24px;
+    }
+</style>

@@ -1,11 +1,22 @@
+---
+import { Icon } from "astro-icon";
+---
+
 <footer
     class="text-center text-base py-4 border-t border-gray-200 text-gray-600 dark:border-transparent dark:bg-bgDark dark:text-gray-300 bg-footer"
 >
-    <p>
-        Made with ❤️ by <a
-            href="https://github.com/PhipeMC"
+    <span>
+        Made with ❤️ and <Icon name="vscode-icons:file-type-astro" /> by <a
+            href="https://linkedin.com/in/phipedev"
             target="_blank"
             class="underline underline-offset-2">PhipeMC</a
         >
-    </p>
+    </span>
 </footer>
+<style lang="css">
+    [astro-icon] {
+        display: inline;
+        width: 24px;
+        height: 24px;
+    }
+</style>

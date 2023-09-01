@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon";
+interface Props {
+    name: string;
+    imgUrl: any;
+}
+
+const { name, imgUrl } = Astro.props;
+---
+
+<div class="flex flex-col items-center gap-1">
+    <Icon name={imgUrl} />
+    <p>{name}</p>
+</div>
+<style lang="css">
+    [astro-icon] {
+        display: inline;
+        width: 64px;
+        height: 64px;
+    }
+</style>

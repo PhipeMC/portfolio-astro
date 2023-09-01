@@ -1,4 +1,6 @@
 ---
+import CardProject from "../components/CardProject.astro";
+import StackItem from "../components/StackItem.astro";
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
 ---
@@ -30,34 +32,39 @@ import { Icon } from "astro-icon";
 				</p>
 				<div class="flex gap-4 my-3 mt-5">
 					<a href="https://linkedin.com/in/phipedev" target="_blank">
-						<i
-							class="fa-brands fa-linkedin text-2xl text-white hover:text-purple-700/50"
-						></i>
+						<Icon
+							name="ion:logo-linkedin"
+							class="w-6 text-2xl text-white hover:text-purple-700/90 transition ease-out duration-300"
+						/>
 					</a>
 					<a href="https://github.com/PhipeMC" target="_blank">
-						<i
-							class="fa-brands fa-github text-2xl text-white hover:text-purple-700/50"
-						></i>
+						<Icon
+							name="mdi:github"
+							class="w-6 text-2xl text-white hover:text-purple-700/90 transition ease-out duration-300"
+						/>
 					</a>
 				</div>
 				<div class="flex gap-4">
 					<a
 						href="#"
-						class="btn border-2 border-purple-700 rounded-md hover:bg-purple-700/[0.2]"
+						class="btn border-2 border-purple-700 rounded-md hover:bg-purple-700/[0.2] flex gap-3 items-center transition ease-out duration-300"
 					>
-						<div class="flex gap-3 items-center">
-							Resume
-							<Icon name="arrow-left-2-light" rotate={2} />
-						</div>
+						<p>Resume</p>
+						<Icon
+							name="bi:file-earmark-pdf-fill"
+							class="w-6 text-white text-2xl"
+						/>
 					</a>
 					<a
 						href="#"
-						class="btn border-2 border-purple-700 bg-purple-700 rounded-md hover:bg-purple-900 hover:border-purple-900"
+						class="btn border-2 border-purple-700 bg-purple-700 rounded-md hover:bg-purple-900 hover:border-purple-900 transition ease-out duration-300"
 					>
-						<div class="flex gap-3 items-center">
+						<div class="flex gap-2 items-center">
 							Portfolio
-							<i class="fa-solid fa-arrow-right animate-arrow"
-							></i>
+							<Icon
+								name="ic:round-keyboard-double-arrow-right"
+								class="w-8 animate-arrow"
+							/>
 						</div>
 					</a>
 				</div>
@@ -111,78 +118,43 @@ import { Icon } from "astro-icon";
 						Tech Stack:
 					</h2>
 					<div class="flex flex-wrap gap-12">
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/HTML.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>HTML</p>
-						</div>
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/CSS.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>CSS</p>
-						</div>
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/JavaScript.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>JavaScript</p>
-						</div>
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/ReactJS.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>ReactJS</p>
-						</div>
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/Bootstrap.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>Bootstrap</p>
-						</div>
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/Tailwind.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>Tailwind</p>
-						</div>
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/MySQL.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>MySQL</p>
-						</div>
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/Git.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>Git</p>
-						</div>
-						<div class="flex flex-col items-center gap-1">
-							<img
-								src="/assets/GitHub.svg"
-								alt=""
-								class="w-icon select-none"
-							/>
-							<p>GitHub</p>
-						</div>
+						<StackItem
+							imgUrl={"vscode-icons:file-type-html"}
+							name="HTML"
+						/>
+						<StackItem
+							imgUrl={"vscode-icons:file-type-css"}
+							name="CSS"
+						/>
+						<StackItem
+							imgUrl={"logos:javascript"}
+							name="JavaScript"
+						/>
+						<StackItem
+							imgUrl={"vscode-icons:file-type-reactjs"}
+							name="ReactJS"
+						/>
+						<StackItem
+							imgUrl={"vscode-icons:file-type-astro"}
+							name="Astro"
+						/>
+						<StackItem
+							imgUrl={"logos:bootstrap"}
+							name="Bootstrap"
+						/>
+						<StackItem
+							imgUrl={"vscode-icons:file-type-tailwind"}
+							name="Tailwind"
+						/>
+						<StackItem
+							imgUrl={"vscode-icons:file-type-mysql"}
+							name="MySQL"
+						/>
+						<StackItem
+							imgUrl={"vscode-icons:file-type-git"}
+							name="Git"
+						/>
+						<StackItem imgUrl={"mdi:github"} name="GitHub" />
 					</div>
 				</div>
 			</div>
@@ -192,147 +164,51 @@ import { Icon } from "astro-icon";
 				class="max-w-7xl w-5/6 m-auto flex flex-col gap-8 pt-20 pb-20 justify-center items-center"
 			>
 				<h2 class="title">
-					My work<span class="text-purple-700">.</span>
+					My projects<span class="text-purple-700">.</span>
 				</h2>
 				<div
 					class="flex items-center justify-center flex-wrap gap-8 max-w-4xl w-full"
 				>
-					<div
-						class="shadow-md bg-bgLightSecondary dark:bg-bgDarkSecondary border border-transparent dark:border-sky-900 max-w-xs rounded-xl overflow-hidden"
-					>
-						<img
-							src="assets/SQLJudge.jpeg"
-							alt="project image"
-							width="320"
-							height="240"
-						/>
-						<div
-							class="p-5 flex flex-col gap-5 border-t-2 border-primary"
-						>
-							<div class="flex flex-col gap-1">
-								<h3 class="text-primary text-2xl font-semibold">
-									SQL Judge
-								</h3>
-								<p class="text-base">
-									Web app to practice SQL languaje build with
-									HTML, CSS, JavaScript, PHP, Bootstrap and
-									MySQL.
-								</p>
-							</div>
-							<div class="flex gap-3 w-full justify-start">
-								<img
-									src="/assets/HTML.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-								<img
-									src="/assets/CSS.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-								<img
-									src="/assets/JavaScript.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-								<img
-									src="/assets/PHP.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-								<img
-									src="/assets/MySQL.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-								<img
-									src="/assets/Bootstrap.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-							</div>
-						</div>
-					</div>
-					<div
-						class="shadow-md bg-bgLightSecondary dark:bg-bgDarkSecondary border border-transparent dark:border-sky-900 max-w-xs rounded-xl overflow-hidden"
-					>
-						<img
-							src="https://sbetav.me/assets/mylinks-9affb3d8.webp"
-							alt="project image"
-							width="320"
-							height="240"
-						/>
-						<div
-							class="p-5 flex flex-col gap-5 border-t-2 border-primary"
-						>
-							<div class="flex flex-col gap-1">
-								<h3 class="text-primary text-2xl font-semibold">
-									Dental software
-								</h3>
-								<p class="text-base">
-									AI model trained with TensorFlow and Python
-									than detect defects in clothing with a
-									camera in real time.
-								</p>
-							</div>
-							<div class="flex gap-3 w-full justify-start">
-								<img
-									src="/assets/ReactJS.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-								<img
-									src="/assets/CSS.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-								<img
-									src="/assets/Bootstrap.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-							</div>
-						</div>
-					</div>
-					<div
-						class="shadow-md bg-bgLightSecondary dark:bg-bgDarkSecondary border border-transparent dark:border-sky-900 max-w-xs rounded-xl overflow-hidden"
-					>
-						<img
-							src="https://sbetav.me/assets/mylinks-9affb3d8.webp"
-							alt="project image"
-							width="320"
-							height="240"
-						/>
-						<div
-							class="p-5 flex flex-col gap-5 border-t-2 border-primary"
-						>
-							<div class="flex flex-col gap-1">
-								<h3 class="text-primary text-2xl font-semibold">
-									Recognition of errors in clothing using AI
-								</h3>
-								<p class="text-base">
-									AI model trained with TensorFlow and Python
-									than detect defects in clothing with a
-									camera in real time.
-								</p>
-							</div>
-							<div class="flex gap-3 w-full justify-start">
-								<img
-									src="/assets/Tensorflow.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-								<img
-									src="/assets/Python.svg"
-									alt=""
-									class="w-6 hover:zoom-out"
-								/>
-							</div>
-						</div>
-					</div>
+					<CardProject
+						title="SQLJudge"
+						body="Web app to practice SQL languaje build with HTML, CSS, JavaScript, PHP, Bootstrap and MySQL."
+						stack={[
+							"vscode-icons:file-type-html",
+							"vscode-icons:file-type-css",
+							"logos:javascript",
+							"logos:bootstrap",
+							"vscode-icons:file-type-php",
+							"vscode-icons:file-type-mysql",
+						]}
+						image=""
+					/>
+					<CardProject
+						title="Dental software"
+						body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+						stack={[
+							"vscode-icons:file-type-reactjs",
+							"vscode-icons:file-type-css",
+							"logos:bootstrap",
+						]}
+						image=""
+					/>
+					<CardProject
+						title="Recognition of errors in clothing using AI"
+						body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+						stack={[
+							"vscode-icons:file-type-python",
+							"logos:tensorflow",
+						]}
+						image=""
+					/>
 				</div>
 			</div>
 			<section id="contact" class="min-h-screen bg-purple-950"></section>
 		</section>
 	</main>
 </Layout>
+<style lang="css">
+	[astro-icon] {
+		display: inline;
+	}
+</style>
