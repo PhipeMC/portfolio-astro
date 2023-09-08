@@ -2,47 +2,11 @@
 import { Icon } from "astro-icon";
 ---
 
-<script>
-    const button = document.getElementById("dark-theme");
-    button?.addEventListener("click", () => {
-        alert("¡El botón ha sido clickeado!");
-    });
-</script>
 <header
     class="bg-bgLightTransparent transition-colors dark:bg-bgDarkTransparent z-10 h-20 flex items-center justify-center fixed w-full outline outline-1 shadow shadow-gray-300 outline-purple-600 dark:shadow-none dark:outline-primary before:-z-10 before:absolute before:backdrop-blur before:w-full before:h-20"
 >
-    <!-- <div class="flex justify-between max-w-7xl w-5/6">
-            <a href="#">
-                <h1 class="select-none font-bold text-2xl text-gray-700 dark:text-white lg:text-3xl lg:scale-95">
-                    Phipe<span class="text-purple-600 text-primary">.</span>dev
-                </h1>
-            </a>
-            <div class="flex gap-6">
-                <nav class="flex items-center justify-center gap-5 lg:gap-8">
-                    <ul
-                        class="text-center flex flex-col items-center gap-1 relative justify-center gap-5 text-gray-600 dark:text-gray-300 text-2xl max-w-screen-xl w-5/6 h-screen lg:flex-row lg:h-0 lg:text-lg m-auto whitespace-nowrap">
-                        <li>
-                            <a href="#" class="hover:text-purple-600 transition ease-out duration-300">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about" class="hover:text-purple-600 transition ease-out duration-300">About</a>
-                        </li>
-                        <li>
-                            <a href="#work" class="hover:text-purple-600 transition ease-out duration-300">Work</a>
-                        </li>
-                        <li>
-                            <a href="#contact"
-                                class="hover:text-purple-600 transition ease-out duration-300">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <select class="text-purple-700 focus:border-none focus:outline-none bg-transparent cursor-pointer">
-                    <option class="dark:bg-bgDarkSecondary" value="en">EN</option>
-                    <option class="dark:bg-bgDarkSecondary" value="es">ES</option>
-                </select>
-            </div> -->
     <div class="flex justify-between max-w-7xl w-5/6">
-        <a href="#">
+        <a href="/">
             <h1
                 class="select-none font-bold text-2xl text-gray-700 dark:text-white lg:text-3xl lg:scale-95"
             >
@@ -56,27 +20,6 @@ import { Icon } from "astro-icon";
                 <ul
                     class="text-center flex flex-col items-center relative justify-center gap-5 text-gray-600 dark:text-gray-300 text-2xl max-w-screen-xl w-5/6 h-screen lg:flex-row lg:h-0 lg:text-lg m-auto whitespace-nowrap"
                 >
-                    <li>
-                        <button aria-label="close-menu" class="lg:hidden"
-                            ><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-8 absolute top-6 right-0"
-                                data-darkreader-inline-stroke=""
-                                style="--darkreader-inline-stroke: currentColor;"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M6 18L18 6M6 6l12 12"
-                                >
-                                </path>
-                            </svg></button
-                        >
-                    </li>
                     <li>
                         <a
                             href="/"
@@ -93,9 +36,9 @@ import { Icon } from "astro-icon";
                     </li>
                     <li>
                         <a
-                            href="/work"
+                            href="/projects"
                             class="hover:text-purple-600 transition ease-out duration-300"
-                            >Work</a
+                            >Projects</a
                         >
                     </li>
                     <li>
@@ -107,45 +50,6 @@ import { Icon } from "astro-icon";
                     </li>
                 </ul>
             </nav>
-            <div class="flex items-center justify-center gap-3">
-                <select
-                    class="text-purple-600 focus:border-none focus:outline-none bg-transparent cursor-pointer"
-                >
-                    <option class="dark:bg-bgDarkSecondary" value="en"
-                        >EN</option
-                    >
-                    <option class="dark:bg-bgDarkSecondary" value="es"
-                        >ES</option
-                    >
-                </select>
-                <button aria-label="toggle-theme" onclick="">
-                    <Icon
-                        name="ri:moon-clear-fill"
-                        class="text-purple-600 w-5"
-                    />
-                </button>
-            </div>
-            <button
-                aria-label="open-menu"
-                id="dark-theme"
-                class="lg:hidden dark:text-gray-300"
-            >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-8"
-                    data-darkreader-inline-stroke=""
-                    style="--darkreader-inline-stroke: currentColor;"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-                </svg>
-            </button>
         </div>
     </div>
 </header>

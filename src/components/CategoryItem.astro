@@ -1,0 +1,55 @@
+---
+import Tag from "./Tag.astro";
+interface Props {
+    title: string;
+    initialDate?: string | number;
+    finalDate: string | number;
+    description?: string;
+    place?: string;
+    city?: string;
+    country?: string;
+    link?: string;
+    tags?: string[];
+}
+
+const {
+    title,
+    initialDate,
+    finalDate,
+    description,
+    place,
+    city,
+    country,
+    link,
+    tags,
+} = Astro.props;
+---
+
+<li class="ml-5">
+    <span class="flex flex-col">
+        <div class="flex gap-8">
+            {
+                link ? (
+                    <a class="font-bold" href={link} target="_blank">
+                        {title}
+                    </a>
+                ) : (
+                    <span class="font-bold">{title}</span>
+                )
+            }
+            <div class="flex gap-3">
+                {tags?.map((tag) => <Tag text={tag} />)}
+            </div>
+        </div>
+        <span class="italic opacity-60">
+            {place}
+            {city && ", " + city}
+            {country && ", " + country}
+        </span>
+        <span class="italic opacity-60">
+            {initialDate && `${initialDate} - `}
+            {finalDate}
+        </span>
+        {description ? <span class="text-bal">{description}</span> : null}
+    </span>
+</li>

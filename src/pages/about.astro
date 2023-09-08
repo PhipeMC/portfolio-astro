@@ -1,18 +1,149 @@
 ---
-import { Icon } from "astro-icon";
 import Layout from "../layouts/Layout.astro";
+import StackItem from "../components/StackItem.astro";
+import Category from "../components/Category.astro";
+import CategoryItem from "../components/CategoryItem.astro";
 ---
 
 <Layout title="About">
-    <main class="pt-20">
-        <h1>About</h1>
-        <Icon name="vscode-icons:file-type-astro" />
-    </main>
+    <section
+        id="about"
+        class="bg-bgLight flex items-center justify-center dark:bg-bgDarkSecondary bg-purple-950 min-h-screen"
+    >
+        <div class="flex flex-col gap-12 max-w-7xl w-5/6 pt-28 pb-20">
+            <div class="flex flex-col gap-3">
+                <h1 class="title">
+                    About<span class="text-purple-600">.</span>
+                </h1>
+                <p class="text-xl text-bal">
+                    Hello! I'm Cesar Dominguez, a Frontend developer from
+                    Mexico. I'm a software engineer with a passion for creating
+                    beautiful and functional web interfaces. My strongest skills
+                    are HTML, CSS, and JavaScript, and I'm always learning new
+                    technologies and tools. I'm also experienced with React and
+                    other frameworks.
+                </p>
+            </div>
+            <div class="flex flex-col gap-5">
+                <h2 class="text-left text-3xl font-medium dark:text-white">
+                    Tech Stack:
+                </h2>
+                <div class="flex flex-wrap gap-12">
+                    <StackItem
+                        imgUrl={"vscode-icons:file-type-html"}
+                        name="HTML"
+                    />
+                    <StackItem
+                        imgUrl={"vscode-icons:file-type-css"}
+                        name="CSS"
+                    />
+                    <StackItem imgUrl={"logos:javascript"} name="JavaScript" />
+                    <StackItem
+                        imgUrl={"vscode-icons:file-type-reactjs"}
+                        name="ReactJS"
+                    />
+                    <StackItem
+                        imgUrl={"vscode-icons:file-type-astro"}
+                        name="Astro"
+                    />
+                    <StackItem imgUrl={"logos:bootstrap"} name="Bootstrap" />
+                    <StackItem
+                        imgUrl={"vscode-icons:file-type-tailwind"}
+                        name="Tailwind"
+                    />
+                    <StackItem
+                        imgUrl={"vscode-icons:file-type-mysql"}
+                        name="MySQL"
+                    />
+                    <StackItem
+                        imgUrl={"vscode-icons:file-type-git"}
+                        name="Git"
+                    />
+                    <StackItem imgUrl={"mdi:github"} name="GitHub" />
+                </div>
+            </div>
+            <Category title="Education">
+                <CategoryItem
+                    title="Computer Systems Engineer"
+                    initialDate={2018}
+                    finalDate={2023}
+                    place="TECNM Sur Guanajuato Campus"
+                    city="Uriangato"
+                    country="Mexico"
+                />
+            </Category>
+            <Category title="Experience">
+                <CategoryItem
+                    title="Intern Web Developer"
+                    initialDate={"Aug 2022"}
+                    finalDate={"Dec 2022"}
+                    place="Centro Medico de Alta Especialidad"
+                    city="Moroleon"
+                    country="Mexico"
+                    tags={[
+                        "HTML",
+                        "CSS",
+                        "JavaScript",
+                        "ReactJS",
+                        ".NET",
+                        "MySQL",
+                        "Bootstrap",
+                    ]}
+                />
+                <CategoryItem
+                    title="Web Developer"
+                    initialDate={"Jan 2023"}
+                    finalDate={"Current"}
+                    place="Centro Medico de Alta Especialidad"
+                    city="Moroleon"
+                    country="Mexico"
+                />
+            </Category>
+            <Category title="Certifications">
+                <CategoryItem
+                    title="SCRUM Fundamentals"
+                    finalDate={"Sep 2021"}
+                    place="SCRUMstudy"
+                    link="https://c46e136a583f7e334124-ac22991740ab4ff17e21daf2ed577041.ssl.cf1.rackcdn.com/Certificate/ScrumFundamentalsCertified-CesarDominguez-873374.pdf"
+                    description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia eveniet voluptatibus eius nemo, facere omnis aliquam, rerum culpa veritatis soluta, libero voluptas laboriosam. Laboriosam dolorem explicabo quae iste, velit aperiam."
+                />
+            </Category>
+
+            <div class="flex flex-col gap-3">
+                <h3 class="text-left text-2xl font-medium dark:text-white">
+                    Skills
+                </h3>
+                <ul
+                    class="marker:text-purple-700 list-disc md:columns-5 columns-2 mx-6 text-lg gap-5 lg:gap-4"
+                >
+                    <li>Spanish (Native)</li>
+                    <li>English (B2)</li>
+                    <li>JavaScript</li>
+                    <li>C++</li>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                    <li>Postgres SQL</li>
+                    <li>MySQL</li>
+                    <li>CSS</li>
+                    <li>SASS</li>
+                    <li>HTML</li>
+                    <li>Node.js</li>
+                    <li>Ionic</li>
+                    <li>Astro</li>
+                    <li>Bootstrap</li>
+                    <li>Taildwind</li>
+                    <li>Git</li>
+                    <li>Jira</li>
+                    <li>Scrum</li>
+                    <li>UI/UX Design</li>
+                    <li>WEB Design</li>
+                    <li>Logo Design</li>
+                    <li>Image Manipulation</li>
+                    <li>Office Suite</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </Layout>
-<style lang="css">
-    [astro-icon] {
-        display: inline;
-        width: 24px;
-        height: 24px;
-    }
-</style>

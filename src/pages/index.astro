@@ -1,4 +1,5 @@
 ---
+import Card from "../components/Card.astro";
 import CardProject from "../components/CardProject.astro";
 import StackItem from "../components/StackItem.astro";
 import Layout from "../layouts/Layout.astro";
@@ -6,209 +7,70 @@ import { Icon } from "astro-icon";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main
-		class="main-bg text-gray-600 selection:bg-gray-400 selection:text-white dark:bg-bgDark dark:text-gray-300"
+	<section
+		class="max-w-7xl w-5/6 min-h-screen pt-20 flex flex-col items-center justify-center gap-9 m-auto lg:flex-row-reverse lg:justify-evenly"
+		id=""
 	>
-		<section
-			class="max-w-7xl w-5/6 min-h-screen pt-20 flex flex-col items-center justify-center gap-9 m-auto lg:flex-row-reverse lg:justify-evenly"
-			id=""
-		>
-			<img
-				src="https://media.licdn.com/dms/image/D5603AQEz4J1zdB9U1A/profile-displayphoto-shrink_400_400/0/1689537265905?e=1695859200&v=beta&t=iKM6IBjxzgdUeD-UAaJFzYoCfyASpyaV9yj6aP8I9sg"
-				alt=""
-				class="animate-profile border-8 border-purple-600"
-			/>
-			<div class="text-center lg:text-left">
-				<p class="dark:text-gray-100 text-xl md:text-2xl xl:text-3xl">
-					Hi, I'm Cesar 👋
-				</p>
-				<h2
-					class="text-2xl scale-110 sm:scale-100 sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-950 md:text-4xl xl:text-5xl"
-				>
-					Frontend Developer
-				</h2>
-				<p class="dark:text-gray-100 text-xl md:text-2xl xl:text-3xl">
-					That loves creating web apps.
-				</p>
-				<div class="flex gap-4 my-3 mt-5">
-					<a href="https://linkedin.com/in/phipedev" target="_blank">
-						<Icon
-							name="ion:logo-linkedin"
-							class="w-6 text-2xl text-white hover:text-purple-700/90 transition ease-out duration-300"
-						/>
-					</a>
-					<a href="https://github.com/PhipeMC" target="_blank">
-						<Icon
-							name="mdi:github"
-							class="w-6 text-2xl text-white hover:text-purple-700/90 transition ease-out duration-300"
-						/>
-					</a>
-				</div>
-				<div class="flex gap-4">
-					<a
-						href="#"
-						class="btn border-2 border-purple-700 rounded-md hover:bg-purple-700/[0.2] flex gap-3 items-center transition ease-out duration-300"
-					>
-						<p>Resume</p>
-						<Icon
-							name="bi:file-earmark-pdf-fill"
-							class="w-6 text-white text-2xl"
-						/>
-					</a>
-					<a
-						href="#"
-						class="btn border-2 border-purple-700 bg-purple-700 rounded-md hover:bg-purple-900 hover:border-purple-900 transition ease-out duration-300"
-					>
-						<div class="flex gap-2 items-center">
-							Portfolio
-							<Icon
-								name="ic:round-keyboard-double-arrow-right"
-								class="w-8 animate-arrow"
-							/>
-						</div>
-					</a>
-				</div>
-			</div>
-		</section>
-		<section
-			id="about"
-			class="bg-bgLight flex items-center justify-center dark:bg-bgDarkSecondary bg-purple-950"
-		>
-			<div class="flex flex-col gap-12 max-w-7xl w-5/6 pt-20 pb-20">
-				<div class="flex flex-col gap-3">
-					<h1 class="title">
-						About<span class="text-purple-600">.</span>
-					</h1>
-					<p class="text-lg text-bal">
-						Hello! I'm Cesar Dominguez, a Frontend developer from
-						Mexico. I'm a software engineer with a passion for
-						creating beautiful and functional web interfaces. My
-						strongest skills are HTML, CSS, and JavaScript, and I'm
-						always learning new technologies and tools. I'm also
-						experienced with React and other frameworks.
-					</p>
-				</div>
-				<div class="flex flex-col gap-3">
-					<h3 class="text-left text-2xl font-medium dark:text-white">
-						Education:
-					</h3>
-					<ul
-						class="marker:text-purple-700 list-disc text-lg flex flex-wrap flex-row gap-5 lg:flex-col lg:gap-4"
-					>
-						<li class="ml-5">
-							Software Engineer <span
-								class="italic opacity-60 text-base block"
-								>TECNM Sur Guanajuato Campus <span class="block"
-									>2018 - 2023</span
-								></span
-							>
-						</li>
-						<li class="ml-5">
-							Full Stack Developer <span
-								class="italic opacity-60 text-base block"
-								>Centro Medico de Alta Especialidad <span
-									class="block">Ago 2022 - Current</span
-								></span
-							>
-						</li>
-					</ul>
-				</div>
-				<div class="flex flex-col gap-5">
-					<h2 class="text-left text-2xl font-medium dark:text-white">
-						Tech Stack:
-					</h2>
-					<div class="flex flex-wrap gap-12">
-						<StackItem
-							imgUrl={"vscode-icons:file-type-html"}
-							name="HTML"
-						/>
-						<StackItem
-							imgUrl={"vscode-icons:file-type-css"}
-							name="CSS"
-						/>
-						<StackItem
-							imgUrl={"logos:javascript"}
-							name="JavaScript"
-						/>
-						<StackItem
-							imgUrl={"vscode-icons:file-type-reactjs"}
-							name="ReactJS"
-						/>
-						<StackItem
-							imgUrl={"vscode-icons:file-type-astro"}
-							name="Astro"
-						/>
-						<StackItem
-							imgUrl={"logos:bootstrap"}
-							name="Bootstrap"
-						/>
-						<StackItem
-							imgUrl={"vscode-icons:file-type-tailwind"}
-							name="Tailwind"
-						/>
-						<StackItem
-							imgUrl={"vscode-icons:file-type-mysql"}
-							name="MySQL"
-						/>
-						<StackItem
-							imgUrl={"vscode-icons:file-type-git"}
-							name="Git"
-						/>
-						<StackItem imgUrl={"mdi:github"} name="GitHub" />
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="work" class="bg-footer">
-			<div
-				class="max-w-7xl w-5/6 m-auto flex flex-col gap-8 pt-20 pb-20 justify-center items-center"
+		<img
+			src="https://media.licdn.com/dms/image/D5603AQEz4J1zdB9U1A/profile-displayphoto-shrink_400_400/0/1689537265905?e=1695859200&v=beta&t=iKM6IBjxzgdUeD-UAaJFzYoCfyASpyaV9yj6aP8I9sg"
+			alt=""
+			class="animate-profile border-8 border-purple-600"
+		/>
+		<div class="text-center lg:text-left">
+			<p class="dark:text-gray-100 text-xl md:text-2xl xl:text-3xl">
+				Hi, I'm Cesar 👋
+			</p>
+			<h2
+				class="text-2xl scale-110 sm:scale-100 sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-950 md:text-4xl xl:text-5xl"
 			>
-				<h2 class="title">
-					My projects<span class="text-purple-700">.</span>
-				</h2>
-				<div
-					class="flex items-center justify-center flex-wrap gap-8 max-w-4xl w-full"
-				>
-					<CardProject
-						title="SQLJudge"
-						body="Web app to practice SQL languaje build with HTML, CSS, JavaScript, PHP, Bootstrap and MySQL."
-						stack={[
-							"vscode-icons:file-type-html",
-							"vscode-icons:file-type-css",
-							"logos:javascript",
-							"logos:bootstrap",
-							"vscode-icons:file-type-php",
-							"vscode-icons:file-type-mysql",
-						]}
-						image=""
+				Frontend Developer
+			</h2>
+			<p class="dark:text-gray-100 text-xl md:text-2xl xl:text-3xl">
+				That loves creating web apps.
+			</p>
+			<div class="flex gap-4 my-3 mt-5">
+				<a href="https://linkedin.com/in/phipedev" target="_blank">
+					<Icon
+						name="ion:logo-linkedin"
+						class="w-8 text-white hover:text-purple-700/90 transition ease-out duration-300 inline"
 					/>
-					<CardProject
-						title="Dental software"
-						body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
-						stack={[
-							"vscode-icons:file-type-reactjs",
-							"vscode-icons:file-type-css",
-							"logos:bootstrap",
-						]}
-						image=""
+				</a>
+				<a href="https://github.com/PhipeMC" target="_blank">
+					<Icon
+						name="mdi:github"
+						class="w-8 text-white hover:text-purple-700/90 transition ease-out duration-300"
 					/>
-					<CardProject
-						title="Recognition of errors in clothing using AI"
-						body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
-						stack={[
-							"vscode-icons:file-type-python",
-							"logos:tensorflow",
-						]}
-						image=""
-					/>
-				</div>
+				</a>
 			</div>
-			<section id="contact" class="min-h-screen bg-purple-950"></section>
-		</section>
-	</main>
+			<div class="flex gap-4">
+				<a
+					href="#"
+					class="btn border-2 border-purple-700 rounded-md hover:bg-purple-700/[0.4] flex gap-3 items-center transition ease-out duration-300"
+				>
+					<p>Resume</p>
+					<Icon
+						name="bi:file-earmark-pdf-fill"
+						class="w-6 text-white text-2xl"
+					/>
+				</a>
+				<a
+					href="about"
+					class="btn border-2 border-purple-700 bg-purple-700 rounded-md hover:bg-purple-900 hover:border-purple-900 transition ease-out duration-300"
+				>
+					<div class="flex gap-2 items-center">
+						Portfolio
+						<Icon
+							name="ic:round-keyboard-double-arrow-right"
+							class="w-8 animate-arrow"
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
 </Layout>
-<style lang="css">
+<!-- <style>
 	[astro-icon] {
 		display: inline;
 	}
-</style>
+</style> -->

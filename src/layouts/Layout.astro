@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
 	title: string;
@@ -9,7 +10,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
@@ -18,132 +19,145 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-	</head>
+		<ViewTransitions />
+		<script is:inline src="./node_modules/preline/dist/preline.js"
+		></script></head
+	>
+
 	<body>
 		<Header />
-		<slot />
+		<main
+			class="main-bg
+			text-gray-600
+			selection:bg-gray-400
+			selection:text-white
+			dark:bg-bgDark
+			dark:text-gray-300"
+		>
+			<slot />
+		</main>
 		<Footer />
+		<style is:global>
+			html {
+				scroll-behavior: smooth;
+			}
+
+			.main-bg {
+				background-color: rgb(0, 9, 21);
+				background-image: radial-gradient(
+						at 0% 0%,
+						rgb(24, 0, 45) 0px,
+						rgba(0, 0, 0, 0) 50%
+					),
+					radial-gradient(
+						at 100% 100%,
+						rgb(24, 0, 45) 0px,
+						rgba(0, 0, 0, 0) 50%
+					);
+			}
+
+			.bg-footer {
+				background-color: #180733;
+			}
+
+			.bg-bgLightTransparent {
+				background-color: rgba(0, 10, 22, 0.5);
+			}
+
+			.text-bal {
+				max-width: 80ch;
+			}
+
+			.title {
+				font-size: 2.25rem;
+				line-height: 2.5rem;
+				font-weight: 700;
+			}
+
+			.w-icon {
+				min-width: 64px;
+				max-width: 64px;
+				min-height: 64px;
+				max-height: 64px;
+				height: 64px;
+				width: 64px;
+			}
+
+			.btn {
+				padding: 8px 16px;
+			}
+
+			.animate-profile {
+				animation: profile 8s linear infinite;
+				transition: border-radius 2s;
+			}
+
+			.animate-arrow {
+				animation: arrow 2s linear infinite;
+			}
+
+			.hover\:zoom-out:hover {
+				transform: scale(1.1);
+				transition: transform 0.5s;
+			}
+
+			/* ===== Scrollbar CSS ===== */
+			/* Firefox */
+			* {
+				scrollbar-width: none;
+				scrollbar-color: #484848 #1e1e1e;
+			}
+
+			/* Chrome, Edge, and Safari */
+			*::-webkit-scrollbar {
+				width: 10px;
+			}
+
+			*::-webkit-scrollbar-track {
+				background: #1e1e1e;
+			}
+
+			*::-webkit-scrollbar-thumb {
+				background-color: #484848;
+				border-radius: 8px;
+				border: 0px none #ffffff;
+			}
+
+			@keyframes profile {
+				0% {
+					border-radius: 56% 44% 42% 58%/51% 55% 45% 49%;
+				}
+
+				25% {
+					border-radius: 41% 59% 36% 64%/61% 55% 45% 39%;
+				}
+
+				50% {
+					border-radius: 59% 41% 53% 47%/46% 48% 52% 54%;
+				}
+
+				75% {
+					border-radius: 49% 51% 38% 62%/58% 51% 49% 42%;
+				}
+
+				100% {
+					border-radius: 56% 44% 42% 58%/51% 55% 45% 49%;
+				}
+			}
+
+			@keyframes arrow {
+				0% {
+					transform: translate(0);
+				}
+
+				50% {
+					transform: translate(4px);
+				}
+
+				100% {
+					transform: translate(0);
+				}
+			}
+		</style>
 	</body>
 </html>
-<style is:global>
-	html {
-		scroll-behavior: smooth;
-	}
-
-	.main-bg {
-		background-color: rgb(0, 9, 21);
-		background-image: radial-gradient(
-				at 0% 0%,
-				rgb(24, 0, 45) 0px,
-				rgba(0, 0, 0, 0) 50%
-			),
-			radial-gradient(
-				at 100% 100%,
-				rgb(24, 0, 45) 0px,
-				rgba(0, 0, 0, 0) 50%
-			);
-	}
-
-	.bg-footer {
-		background-color: #180733;
-	}
-
-	.bg-bgLightTransparent {
-		background-color: rgba(0, 10, 22, 0.5);
-	}
-
-	.text-bal {
-		max-width: 80ch;
-	}
-
-	.title {
-		font-size: 2.25rem;
-		line-height: 2.5rem;
-		font-weight: 700;
-	}
-
-	.w-icon {
-		min-width: 64px;
-		max-width: 64px;
-		min-height: 64px;
-		max-height: 64px;
-		height: 64px;
-		width: 64px;
-	}
-
-	.btn {
-		padding: 8px 16px;
-	}
-
-	.animate-profile {
-		animation: profile 8s linear infinite;
-		transition: border-radius 2s;
-	}
-
-	.animate-arrow {
-		animation: arrow 2s linear infinite;
-	}
-
-	.hover\:zoom-out:hover {
-		transform: scale(1.1);
-		transition: transform 0.5s;
-	}
-
-	/* ===== Scrollbar CSS ===== */
-	/* Firefox */
-	* {
-		scrollbar-width: none;
-		scrollbar-color: #484848 #1e1e1e;
-	}
-
-	/* Chrome, Edge, and Safari */
-	*::-webkit-scrollbar {
-		width: 10px;
-	}
-
-	*::-webkit-scrollbar-track {
-		background: #1e1e1e;
-	}
-
-	*::-webkit-scrollbar-thumb {
-		background-color: #484848;
-		border-radius: 8px;
-		border: 0px none #ffffff;
-	}
-
-	@keyframes profile {
-		0% {
-			border-radius: 56% 44% 42% 58%/51% 55% 45% 49%;
-		}
-
-		25% {
-			border-radius: 41% 59% 36% 64%/61% 55% 45% 39%;
-		}
-
-		50% {
-			border-radius: 59% 41% 53% 47%/46% 48% 52% 54%;
-		}
-
-		75% {
-			border-radius: 49% 51% 38% 62%/58% 51% 49% 42%;
-		}
-
-		100% {
-			border-radius: 56% 44% 42% 58%/51% 55% 45% 49%;
-		}
-	}
-
-	@keyframes arrow {
-		0% {
-			transform: translate(0);
-		}
-
-		50% {
-			transform: translate(4px);
-		}
-
-		100% {
-			transform: translate(0);
-		}
-	}
-</style>

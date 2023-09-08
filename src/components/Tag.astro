@@ -1,0 +1,49 @@
+---
+interface Props {
+    text: string;
+}
+
+enum TagType {
+    ".NET",
+    "Astro",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "ReactJS",
+    "Bootstrap",
+    "Tailwind",
+    "PHP",
+    "TypeScript",
+    "Java",
+    "MySQL",
+    "SQL Server",
+    "Python",
+}
+
+const { text } = Astro.props;
+---
+
+<span
+    class="font"
+    class:list={[
+        "inline-flex items-center gap-1.5 py-1.5 px-3 rounded text-xs font-medium",
+        {
+            "bg-green-800 text-green-300": text === TagType[0],
+            "bg-black text-orange-400": text === TagType[1],
+            "bg-orange-600 text-white": text === TagType[2],
+            "bg-sky-500 text-white": text === TagType[3],
+            "bg-yellow-400 text-black": text === TagType[4],
+            "bg-blue-600 text-white": text === TagType[5],
+            "bg-purple-800 text-white": text === TagType[6],
+            "bg-sky-600 text-white": text === TagType[7],
+            "bg-purple-500 text-white": text === TagType[8],
+            "bg-blue-900 text-white": text === TagType[9],
+            "bg-white text-orange-500": text === TagType[10],
+            "bg-cyan-900 text-white": text === TagType[11],
+            "bg-zinc-300 text-red-700": text === TagType[12],
+            "bg-sky-800 text-yellow-400": text === TagType[13],
+        },
+    ]}
+>
+    {text}
+</span>

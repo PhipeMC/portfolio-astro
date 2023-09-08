@@ -1,0 +1,84 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Projects">
+    <section id="work">
+        <div
+            class="max-w-7xl w-5/6 m-auto flex flex-col gap-8 pt-20 pb-20 justify-center items-center"
+        >
+            <h2 class="title">
+                My projects<span class="text-purple-700">.</span>
+            </h2>
+            <div
+                class="flex items-center justify-center flex-wrap gap-8 w-full"
+            >
+                <Card
+                    title="SQLJudge"
+                    body="Web app to practice SQL languaje build with HTML, CSS, JavaScript, PHP, Bootstrap and MySQL."
+                    icons={[
+                        "vscode-icons:file-type-html",
+                        "vscode-icons:file-type-css",
+                        "logos:javascript",
+                        "logos:bootstrap",
+                        "vscode-icons:file-type-php",
+                        "vscode-icons:file-type-mysql",
+                    ]}
+                    image=""
+                />
+                <Card
+                    title="Dental software"
+                    body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+                    icons={[
+                        "vscode-icons:file-type-reactjs",
+                        "vscode-icons:file-type-css",
+                        "logos:bootstrap",
+                    ]}
+                    image=""
+                />
+                <Card
+                    title="Recognition of errors in clothing using AI"
+                    body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+                    icons={[
+                        "vscode-icons:file-type-python",
+                        "logos:tensorflow",
+                    ]}
+                    image=""
+                />
+                <!-- <CardProject
+                    title="SQLJudge"
+                    body="Web app to practice SQL languaje build with HTML, CSS, JavaScript, PHP, Bootstrap and MySQL."
+                    stack={[
+                        "vscode-icons:file-type-html",
+                        "vscode-icons:file-type-css",
+                        "logos:javascript",
+                        "logos:bootstrap",
+                        "vscode-icons:file-type-php",
+                        "vscode-icons:file-type-mysql",
+                    ]}
+                    image=""
+                />
+                <CardProject
+                    title="Dental software"
+                    body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+                    stack={[
+                        "vscode-icons:file-type-reactjs",
+                        "vscode-icons:file-type-css",
+                        "logos:bootstrap",
+                    ]}
+                    image=""
+                />
+                <CardProject
+                    title="Recognition of errors in clothing using AI"
+                    body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+                    stack={[
+                        "vscode-icons:file-type-python",
+                        "logos:tensorflow",
+                    ]}
+                    image=""
+                /> -->
+            </div>
+        </div>
+    </section>
+</Layout>
