@@ -5,13 +5,16 @@ interface Props {
 	body: string;
 	image: string;
 	icons: string[];
+	page: string;
 }
 
-const { image, title, body, icons } = Astro.props;
+const { image, title, body, icons, page } = Astro.props;
 ---
 
-<div
-	class="bg-white border rounded-xl shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] max-w-3xl"
+<a
+	class="bg-white border rounded-xl shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] max-w-3xl w-full hover:zoom-out transition ease-out"
+	href={page}
+	transition:animate="none"
 >
 	<div
 		class="flex-shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs"
@@ -20,25 +23,31 @@ const { image, title, body, icons } = Astro.props;
 			class="w-full h-full absolute top-0 left-0 object-cover"
 			src={image}
 			alt={title}
+			loading="lazy"
+			transition:name={image}
+			transition:persist
 		/>
 	</div>
 	<div class="flex flex-wrap">
 		<div class="p-4 flex flex-col h-full sm:p-7">
-			<h3 class="text-3xl font-bold text-gray-800 dark:text-white">
+			<h3
+				class="text-3xl font-bold text-gray-800 dark:text-white"
+				transition:name={title}
+				transition:animate="slide"
+				transition:persist
+			>
 				{title}
 			</h3>
 			<p class="mt-1 text-gray-800 dark:text-gray-400">
 				{body}
 			</p>
-			<div class="mt-5 sm:mt-auto">
-				<div class="flex gap-3 w-full justify-start">
-					{
-						icons.map((icon) => (
-							<Icon name={icon} class="w-7 hover:zoom-out" />
-						))
-					}
-				</div>
+			<div class="mt-5 sm:mt-auto flex gap-3 w-full justify-start">
+				{
+					icons.map((icon) => (
+						<Icon name={icon} class="w-7 hover:zoom-out" />
+					))
+				}
 			</div>
 		</div>
 	</div>
-</div>
+</a>

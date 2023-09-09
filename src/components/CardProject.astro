@@ -22,11 +22,7 @@ const { title, body, stack, image } = Astro.props;
             </p>
         </div>
         <div class="flex gap-3 w-full justify-start">
-            {
-                stack.map((stackTech) => (
-                    <Icon name={stackTech} class="w-6 hover:zoom-out" />
-                ))
-            }
+            {stack.map((stackTech) => <Icon name={stackTech} class="w-6" />)}
         </div>
     </div>
 </div>

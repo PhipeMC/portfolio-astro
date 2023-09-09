@@ -1,0 +1,227 @@
+---
+import Icon from "astro-icon";
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+import SQLImage from "../../assets/sql-judge-image.jpg";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Projects">
+    <section id="work">
+        <div
+            class="max-w-7xl w-5/6 m-auto flex flex-col gap-8 pt-28 pb-20 justify-center items-center"
+        >
+            <h2 class="title">
+                My projects<span class="text-purple-700">.</span>
+            </h2>
+            <div
+                class="flex items-center justify-center flex-wrap gap-8 w-full"
+            >
+                <a
+                    class="bg-white border rounded-xl shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] max-w-3xl w-full hover:zoom-out transition ease-out"
+                    href="/projects/sql-judge"
+                >
+                    <div
+                        class="flex-shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs"
+                    >
+                        <Image
+                            class="w-full h-full absolute top-0 left-0 object-cover"
+                            src={SQLImage}
+                            alt={"SQLJudge"}
+                            transition:name="sql-judge-image"
+                        />
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="p-4 flex flex-col h-full sm:p-7">
+                            <h3
+                                class="text-3xl font-bold text-gray-800 dark:text-white"
+                                transition:name="sql-judge-title"
+                            >
+                                SQL Judge
+                            </h3>
+                            <p class="mt-1 text-gray-800 dark:text-gray-400">
+                                Web app to practice SQL languaje build with
+                                HTML, CSS, JavaScript, PHP, Bootstrap and MySQL.
+                            </p>
+                            <div
+                                class="mt-5 sm:mt-auto flex gap-3 w-full justify-start"
+                            >
+                                {
+                                    [
+                                        "vscode-icons:file-type-html",
+                                        "vscode-icons:file-type-css",
+                                        "logos:javascript",
+                                        "logos:bootstrap",
+                                        "vscode-icons:file-type-php",
+                                        "vscode-icons:file-type-mysql",
+                                    ].map((icon) => (
+                                        <Icon name={icon} class="w-7" />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div
+                class="flex items-center justify-center flex-wrap gap-8 w-full"
+            >
+                <a
+                    class="bg-white border rounded-xl shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] max-w-3xl w-full hover:zoom-out transition ease-out"
+                    href="/projects/dental-software"
+                >
+                    <div
+                        class="flex-shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs"
+                    >
+                        <Image
+                            class="w-full h-full absolute top-0 left-0 object-cover"
+                            src={SQLImage}
+                            alt={"SQLJudge"}
+                            transition:name="dental-software-image"
+                        />
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="p-4 flex flex-col h-full sm:p-7">
+                            <h3
+                                class="text-3xl font-bold text-gray-800 dark:text-white"
+                                transition:name="dental-software-title"
+                            >
+                                Dental Software
+                            </h3>
+                            <p class="mt-1 text-gray-800 dark:text-gray-400">
+                                Web app to practice SQL languaje build with
+                                HTML, CSS, JavaScript, PHP, Bootstrap and MySQL.
+                            </p>
+                            <div
+                                class="mt-5 sm:mt-auto flex gap-3 w-full justify-start"
+                            >
+                                {
+                                    [
+                                        "vscode-icons:file-type-reactjs",
+                                        "vscode-icons:file-type-css",
+                                        "logos:bootstrap",
+                                    ].map((icon) => (
+                                        <Icon name={icon} class="w-7" />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div
+                class="flex items-center justify-center flex-wrap gap-8 w-full"
+            >
+                <a
+                    class="bg-white border rounded-xl shadow-sm sm:flex dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] max-w-3xl w-full hover:zoom-out transition ease-out"
+                    href="/projects/recognition-of-errors-in-clothing-using-ai"
+                >
+                    <div
+                        class="flex-shrink-0 relative w-full rounded-t-xl overflow-hidden pt-[40%] sm:rounded-l-xl sm:max-w-[15rem] md:rounded-tr-none md:max-w-xs"
+                    >
+                        <Image
+                            class="w-full h-full absolute top-0 left-0 object-cover"
+                            src={SQLImage}
+                            alt={"SQLJudge"}
+                            transition:name="recognition-of-errors-in-clothing-using-ai-image"
+                        />
+                    </div>
+                    <div class="flex flex-wrap">
+                        <div class="p-4 flex flex-col h-full sm:p-7">
+                            <h3
+                                class="text-3xl font-bold text-gray-800 dark:text-white"
+                                transition:name="recognition-of-errors-in-clothing-using-ai-title"
+                            >
+                                Recognition of errors in clothing using AI
+                            </h3>
+                            <p class="mt-1 text-gray-800 dark:text-gray-400">
+                                AI model trained with TensorFlow and Python than
+                                detect defects in clothing with a camera in real
+                                time.
+                            </p>
+                            <div
+                                class="mt-5 sm:mt-auto flex gap-3 w-full justify-start"
+                            >
+                                {
+                                    [
+                                        "vscode-icons:file-type-python",
+                                        "logos:tensorflow",
+                                    ].map((icon) => (
+                                        <Icon name={icon} class="w-7" />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- <Card
+                title="SQL Judge"
+                body="Web app to practice SQL languaje build with HTML, CSS, JavaScript, PHP, Bootstrap and MySQL."
+                icons={[
+                    "vscode-icons:file-type-html",
+                    "vscode-icons:file-type-css",
+                    "logos:javascript",
+                    "logos:bootstrap",
+                    "vscode-icons:file-type-php",
+                    "vscode-icons:file-type-mysql",
+                ]}
+                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnm4H0znjfI_Ka_h-ZSNuoBSwZHqqTeP63hNBBfYVzZkam7lazW6-2cZYoQkLLC2GXvw8&usqp=CAU"
+                page="/projects/sql-judge"
+            /> -->
+            <!-- <Card
+                title="Dental software"
+                body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+                icons={[
+                    "vscode-icons:file-type-reactjs",
+                    "vscode-icons:file-type-css",
+                    "logos:bootstrap",
+                ]}
+                image="https://dental3dmarket.com/wp-content/uploads/2020/10/resinadental-softwaredental-alineadordental-3dmarketdental-impresion3d-alineadoresdentales.jpg"
+                page="/projects/dental-software"
+            />
+            <Card
+                title="Recognition of errors in clothing using AI"
+                body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+                icons={[
+                    "vscode-icons:file-type-python",
+                    "logos:tensorflow",
+                ]}
+                image="https://viso.ai/wp-content/uploads/2022/07/smart-city-scene-computer-vision-deep-learning-networks-1060x707.png"
+                page="/projects/recognition-of-errors-in-clothing-using-ai"
+            /> -->
+            <!-- <CardProject
+                title="SQLJudge"
+                body="Web app to practice SQL languaje build with HTML, CSS, JavaScript, PHP, Bootstrap and MySQL."
+                stack={[
+                    "vscode-icons:file-type-html",
+                    "vscode-icons:file-type-css",
+                    "logos:javascript",
+                    "logos:bootstrap",
+                    "vscode-icons:file-type-php",
+                    "vscode-icons:file-type-mysql",
+                ]}
+                image=""
+            />
+            <CardProject
+                title="Dental software"
+                body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+                stack={[
+                    "vscode-icons:file-type-reactjs",
+                    "vscode-icons:file-type-css",
+                    "logos:bootstrap",
+                ]}
+                image=""
+            />
+            <CardProject
+                title="Recognition of errors in clothing using AI"
+                body="AI model trained with TensorFlow and Python than detect defects in clothing with a camera in real time."
+                stack={[
+                    "vscode-icons:file-type-python",
+                    "logos:tensorflow",
+                ]}
+                image=""
+            /> -->
+        </div>
+    </section>
+</Layout>

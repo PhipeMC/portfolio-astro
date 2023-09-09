@@ -1,7 +1,4 @@
 ---
-import Card from "../components/Card.astro";
-import CardProject from "../components/CardProject.astro";
-import StackItem from "../components/StackItem.astro";
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
 ---
@@ -9,12 +6,12 @@ import { Icon } from "astro-icon";
 <Layout title="Welcome to Astro.">
 	<section
 		class="max-w-7xl w-5/6 min-h-screen pt-20 flex flex-col items-center justify-center gap-9 m-auto lg:flex-row-reverse lg:justify-evenly"
-		id=""
 	>
 		<img
 			src="https://media.licdn.com/dms/image/D5603AQEz4J1zdB9U1A/profile-displayphoto-shrink_400_400/0/1689537265905?e=1695859200&v=beta&t=iKM6IBjxzgdUeD-UAaJFzYoCfyASpyaV9yj6aP8I9sg"
 			alt=""
 			class="animate-profile border-8 border-purple-600"
+			loading="lazy"
 		/>
 		<div class="text-center lg:text-left">
 			<p class="dark:text-gray-100 text-xl md:text-2xl xl:text-3xl">
@@ -69,8 +66,3 @@ import { Icon } from "astro-icon";
 		</div>
 	</section>
 </Layout>
-<!-- <style>
-	[astro-icon] {
-		display: inline;
-	}
-</style> -->
