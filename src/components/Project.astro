@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import Icon from "astro-icon";
+
+interface Tags {
+    name: string;
+    color: string;
+    background: string;
+}
+
+interface Props {
+    name: string;
+    description: string;
+    tags: Array<Tags>;
+    image?: ImageMetadata;
+    source_link?: string;
+}
+
+const { name, description, tags, image, source_link } = Astro.props;
+---
+
+<div
+    class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7] max-w-[350px] w-full hover:zoom-out transition ease-out"
+>
+    <div class="p-4 md:p-5 flex flex-col h-full">
+        {image ? <Image src={image} alt={name} class="rounded" /> : null}
+        <div class="flex flex-col justify-between mt-3 h-full">
+            <div>
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                    {name}
+                </h3>
+                <p class="mt-2 text-gray-800 dark:text-gray-400">
+                    {description}
+                </p>
+            </div>
+            {
+                source_link ? (
+                    <a
+                        class="mt-3 inline-flex items-center gap-2 text-sm font-medium w-full justify-center text-gray-400 hover:text-purple-700 transition ease-out duration-300"
+                        href={source_link + ""}
+                        target="_blank"
+                    >
+                        <Icon name="mdi:github" class="w-7" />
+                        Source code
+                        <Icon
+                            name="ic:outline-keyboard-double-arrow-right"
+                            class="w-7"
+                        />
+                    </a>
+                ) : null
+            }
+        </div>
+    </div>
+    <div
+        class="bg-gray-100 border-t rounded-b-xl py-3 px-4 md:py-4 md:px-5 dark:bg-gray-800 dark:border-gray-700 flex flex-wrap gap-x-2 gap-y-1"
+    >
+        {
+            tags.map((tag) => (
+                <span
+                    class:list={[
+                        "mt-1 text-sm rounded px-1.5 font-semibold",
+                        [tag.color, tag.background],
+                    ]}
+                >
+                    {tag.name}
+                </span>
+            ))
+        }
+    </div>
+</div>

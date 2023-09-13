@@ -1,0 +1,27 @@
+---
+import Project from "../components/Project.astro";
+import { projects } from "../constants";
+---
+
+<section id="projects">
+    <div
+        class="max-w-7xl w-5/6 m-auto flex flex-col gap-8 pt-24 pb-20 justify-center items-center"
+    >
+        <h2 class="title">
+            My projects<span class="text-purple-700">.</span>
+        </h2>
+        <div class="flex flex-wrap gap-8 lg:gap-14 w-full justify-center">
+            {
+                projects.map((project) => (
+                    <Project
+                        name={project.name}
+                        description={project.description}
+                        tags={project.tags}
+                        image={project.image}
+                        source_link={project.source_link}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</section>
